@@ -13,3 +13,14 @@ app.listen(port, () => {
     fs.writeFileSync(appPid, `${process.pid}`);
     console.log(`Server running on port http://127.0.0.1:${port}`);
 })
+
+// app.get('/api/v2/rocket-man1/', (req, res) => {
+//     const myObject = {who: "rocket man", where: "mars"};
+//     const jsonString = JSON.stringify(myObject);
+//     res.json(jsonString);
+// })
+
+app.get('/api/v2/rocket-man1/', (req, res) => {
+    const myObject = {who: "rocket man", where: "mars"};
+    res.json(myObject); // Send the object directly as JSON
+});
